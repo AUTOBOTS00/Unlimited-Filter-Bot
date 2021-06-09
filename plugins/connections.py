@@ -37,12 +37,12 @@ async def addconnection(client,message):
         if (st.status == "administrator") or (st.status == "creator") or (str(userid) in Config.AUTH_USERS):
             pass
         else:
-            await message.reply_text("You should be an admin in Given group!", quote=True)
+            await message.reply_text("You should be an admin in Given group 🙄", quote=True)
             return
     except Exception as e:
         print(e)
         await message.reply_text(
-            "Invalid Group ID!\n\nIf correct, Make sure I'm present in your group!!",
+            "Invalid Group ID!\n\nIf correct, Make sure I'm present in your group 🙄!",
             quote=True
         )
         return
@@ -68,15 +68,15 @@ async def addconnection(client,message):
                     )
             else:
                 await message.reply_text(
-                    "You're already connected to this chat!",
+                    "You're already connected to this chat 😊",
                     quote=True
                 )
         else:
-            await message.reply_text("Add me as an admin in group", quote=True)
+            await message.reply_text("Add me as an admin in group 😊", quote=True)
     except Exception as e:
         print(e)
         await message.reply_text(
-            "Some error occured! Try again later.",
+            "Some error occured! Try again later 😑.",
             quote=True
         )
         return
@@ -111,7 +111,7 @@ async def connections(client,message):
     groupids = await all_connections(str(userid))
     if groupids is None:
         await message.reply_text(
-            "There are no active connections!! Connect to some groups first.",
+            "There are no active connections!! Connect to some groups first 😌.",
             quote=True
         )
         return
